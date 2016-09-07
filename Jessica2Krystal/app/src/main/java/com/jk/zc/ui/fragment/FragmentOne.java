@@ -1,4 +1,4 @@
-package zc.jk.gank.jessica2krystal;
+package com.jk.zc.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,27 +8,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import com.jk.zc.R;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
  * Created by ZhangCheng on 2016/6/8.
  */
-public class FragmentTwo extends Fragment {
+public class FragmentOne extends Fragment {
 
-    @Bind(R.id.tv)
+    @BindView(R.id.tv)
     TextView mTextView;
 
-    private static FragmentTwo instance;
+    private static FragmentOne instance;
 
-    public static FragmentTwo newInstance() {
+    public static FragmentOne newInstance() {
         if (instance == null) {
-            instance = new FragmentTwo();
+            instance = new FragmentOne();
         }
         return instance;
     }
 
-    public FragmentTwo() {
+    public FragmentOne() {
 
     }
 
@@ -40,10 +42,9 @@ public class FragmentTwo extends Fragment {
         return mRootView;
     }
 
-
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        mTextView.setText("第二个页面");
+        mTextView.setText("第一个页面");
     }
 }

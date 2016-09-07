@@ -1,23 +1,27 @@
-package zc.jk.gank.jessica2krystal;
+package com.jk.zc.ui;
 
+import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
+import com.jk.zc.R;
+import com.jk.zc.ui.fragment.FragmentOne;
+import com.jk.zc.ui.fragment.FragmentThree;
+import com.jk.zc.ui.fragment.FragmentTwo;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnMenuTabClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
-    @Bind(R.id.main_viewpage)
+    @BindView(R.id.main_viewpage)
     ViewPager mViewPage;
 
     List<Fragment> mFragments;
@@ -103,3 +107,4 @@ public class MainActivity extends AppCompatActivity {
         mBottomBar.onSaveInstanceState(outState);
     }
 }
+

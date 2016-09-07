@@ -1,4 +1,4 @@
-package zc.jk.gank.jessica2krystal;
+package com.jk.zc;
 
 import org.junit.Test;
 

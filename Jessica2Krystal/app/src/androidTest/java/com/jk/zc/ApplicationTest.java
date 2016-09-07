@@ -1,4 +1,4 @@
-package zc.jk.gank.jessica2krystal;
+package com.jk.zc;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

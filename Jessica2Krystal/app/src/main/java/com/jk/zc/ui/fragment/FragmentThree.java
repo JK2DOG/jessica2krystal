@@ -1,4 +1,4 @@
-package zc.jk.gank.jessica2krystal;
+package com.jk.zc.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import butterknife.Bind;
+import com.jk.zc.R;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -16,7 +18,7 @@ import butterknife.ButterKnife;
  */
 public class FragmentThree extends Fragment {
 
-    @Bind(R.id.tv)
+    @BindView(R.id.tv)
     TextView mTextView;
 
     private static FragmentThree instance;
