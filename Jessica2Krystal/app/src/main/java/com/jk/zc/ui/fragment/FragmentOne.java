@@ -6,12 +6,15 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.jk.zc.NFCActivity;
 import com.jk.zc.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by ZhangCheng on 2016/6/8.
@@ -20,6 +23,10 @@ public class FragmentOne extends Fragment {
 
     @BindView(R.id.tv)
     TextView mTextView;
+
+    @BindView(R.id.btn_nfc)
+    Button mBtnNFC;
+
 
     private static FragmentOne instance;
 
@@ -46,5 +53,11 @@ public class FragmentOne extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mTextView.setText("第一个页面");
+    }
+
+
+    @OnClick(R.id.btn_nfc)
+    void click() {
+        NFCActivity.start(getContext());
     }
 }

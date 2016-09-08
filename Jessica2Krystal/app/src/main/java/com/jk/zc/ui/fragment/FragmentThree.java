@@ -37,7 +37,7 @@ public class FragmentThree extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View mRootView = inflater.inflate(R.layout.fragment_one, container, false);
+        View mRootView = inflater.inflate(R.layout.fragment_three, container, false);
         ButterKnife.bind(this, mRootView);
         return mRootView;
     }
