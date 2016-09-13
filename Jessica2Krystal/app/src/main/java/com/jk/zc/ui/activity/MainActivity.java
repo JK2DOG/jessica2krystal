@@ -1,4 +1,4 @@
-package com.jk.zc.ui;
+package com.jk.zc.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -8,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.jk.zc.R;
+import com.jk.zc.ui.activity.base.BaseActivity;
 import com.jk.zc.ui.fragment.FragmentOne;
 import com.jk.zc.ui.fragment.FragmentThree;
 import com.jk.zc.ui.fragment.FragmentTwo;
@@ -20,7 +21,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     @BindView(R.id.main_viewpage)
     ViewPager mViewPage;
 
@@ -28,11 +29,19 @@ public class MainActivity extends AppCompatActivity {
 
     private BottomBar mBottomBar;
 
+
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+    @Override
+    public void initViews() {
+
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
         setViewPager();
         setBottomBar(savedInstanceState);
     }

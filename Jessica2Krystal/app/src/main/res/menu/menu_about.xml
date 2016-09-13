@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/bb_favorites"
+        android:icon="@drawable/ic_favorites"
+        android:title="Favorites"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bb_nearby"
+        android:icon="@drawable/ic_nearby"
+        android:title="Nearby"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/bb_friends"
+        android:icon="@drawable/ic_friends"
+        android:title="Friends"
+        app:showAsAction="never" />
+</menu>

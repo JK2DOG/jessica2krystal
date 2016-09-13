@@ -1,4 +1,4 @@
-package com.jk.zc.ui;
+package com.jk.zc.ui.activity.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -26,10 +26,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         setContentView(getLayoutId());
         ButterKnife.bind(this);
         initViews();
-        initToolBar();
     }
 
-    private void initToolBar() {
+    public void initToolBar() {
         Toolbar mToolBar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolBar);
     }

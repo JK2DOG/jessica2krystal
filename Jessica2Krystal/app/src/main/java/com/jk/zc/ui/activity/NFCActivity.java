@@ -9,6 +9,7 @@ import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.jk.zc.R;
+import com.jk.zc.ui.activity.base.BaseActivity;
 import com.socks.library.KLog;
 
 import java.util.Arrays;
@@ -16,7 +17,7 @@ import java.util.Arrays;
 /**
  * Created by ZhangCheng on 2016/9/7.
  */
-public class NFCActivity extends AppCompatActivity {
+public class NFCActivity extends BaseActivity {
 
     private NfcAdapter mNfcAdapter;
 
@@ -26,11 +27,13 @@ public class NFCActivity extends AppCompatActivity {
         context.startActivity(intent);
     }
 
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_nfc;
+    }
 
     @Override
-    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.activity_nfc);
+    public void initViews() {
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
         handleIntent(getIntent());
     }
@@ -69,5 +72,6 @@ public class NFCActivity extends AppCompatActivity {
         //NFC卡片所支持的技术标准
         KLog.e("TechList:" + Arrays.toString(tag.getTechList()));
     }
+
 
 }
