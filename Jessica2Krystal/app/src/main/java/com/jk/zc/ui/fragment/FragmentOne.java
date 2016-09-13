@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.jk.zc.NFCActivity;
+import com.jk.zc.ui.activity.NFCActivity;
 import com.jk.zc.R;
 
 import butterknife.BindView;
