@@ -44,6 +44,7 @@
 
         <activity
             android:name=".ui.activity.AboutActivity"
+            android:theme="@style/BaseAppTheme.NoTrans"
             android:label="关于"></activity>
 
     </application>
